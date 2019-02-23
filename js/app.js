@@ -1,12 +1,12 @@
-const initialiseContent = function () {
-  const newItemform = document.querySelector('#new-item-form');
+const initialLoad = function () {
+  const newItemform = document.querySelector('#add-mountain-form').style.display = "block";
   newItemform.addEventListener('submit', handleNewItemFormSubmit);
 
   const deleteAllButton = document.querySelector('#delete-all');
   deleteAllButton.addEventListener('click', handleDeleteAllClick);
 }
 
-document.addEventListener('DOMContentLoaded', initialiseContent)
+document.addEventListener('DOMContentLoaded', initialLoad)
 
 const handleNewItemFormSubmit = function (event) {
   event.preventDefault();

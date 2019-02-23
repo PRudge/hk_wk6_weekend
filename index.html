@@ -7,35 +7,40 @@
     <script src="js/app.js"></script>
   </head>
   <body>
+    <div id = "wrapper">
     <header><h1>Add to the list of mountains that you have climbed in Scotland</h1></header>
-    <form id="new-item-form">
-      <div id="form-wrapper">
-        <div class="form-item">
-          <label for="title" class="primary">Name</label>
-          <input type="mountain" id="mountain" required/>
+    <main>
+      <!-- <button id="add-mountains">Add some mountains</button> -->
+      <form id="add-mountain-form">
+        <div id="form-wrapper">
+          <div class="form-item">
+            <label for="title" class="primary">Name</label>
+            <input type="mountain" id="mountain" required/>
+          </div>
+
+          <div class="form-item">
+            <label for="height" class="primary">Height</label>
+            <input type="text" id="height" required/>
+          </div>
+
+          <div class="form-item">
+            <label for="category" class="primary">Category</label>
+            <select id="category">
+              <option value="" disabled selected></option>
+              <option value="Munro">Munro</option>
+              <option value="Corbett">Corbett</option>
+              <option value="Graham">Graham</option>
+            </select>
+          </div>
         </div>
+        <input type="submit" value="save"/>
+      </form>
 
-        <div class="form-item">
-          <label for="height" class="primary">Height</label>
-          <input type="text" id="height" required/>
-        </div>
+      <button id="delete-all">Delete All Input</button>
 
-        <div class="form-item">
-          <label for="category" class="primary">Category</label>
-          <select id="category">
-            <option value="" disabled selected></option>
-            <option value="Munro">Munro</option>
-            <option value="Corbett">Corbett</option>
-            <option value="Graham">Graham</option>
-          </select>
-        </div>
-      </div>
-      <input type="submit" value="save"/>
-    </form>
-
-    <button id="delete-all">Delete All Input</button>
-
-    <h2>List of Mountains</h2>
-    <div id="mountain-list"></div>
+      <h2>List of Mountains</h2>
+      <div id="mountain-list"></div>
+    </main>
+  </div>
   </body>
 </html>
