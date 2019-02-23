@@ -6,7 +6,7 @@ body {
   display: grid;
   /* grid-template-rows: 6fr .75fr 8fr .75fr; */
   /* grid-template-columns: 2fr  5fr  2fr; */
-  grid-template-columns: 1fr  6fr  1fr;
+  grid-template-columns: 2fr  5fr  2fr;
   grid-template-rows: auto auto auto;
 
   width: 100%;
@@ -29,14 +29,8 @@ main{
     /* min-height: 700px; */
 }
 
-.hidden {
-  display: none;
-  /* visibility: hidden; */
-}
-
-/* #add-mountain-form{display:none;} */
-
 #form-wrapper {
+  display: none;
   width: 100%;
   display: flex;
   flex-direction: row;

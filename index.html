@@ -10,7 +10,7 @@
     <div id = "wrapper">
     <header><h1>Add to the list of mountains that you have climbed in Scotland</h1></header>
     <main>
-      <!-- <button id="add-mountains">Add some mountains</button> -->
+      <button id="add-mountains">Add some mountains</button>
       <form id="add-mountain-form">
         <div id="form-wrapper">
           <div class="form-item">
@@ -31,6 +31,13 @@
               <option value="Corbett">Corbett</option>
               <option value="Graham">Graham</option>
             </select>
+          </div>
+
+          <div class="form-item">
+            <input type="radio" id="climbed" name="climb_status" value=0>
+            <label for="climbed">Climbed</label>
+            <input type="radio" id="to_climb" name="climb_status" value=1 checked>
+            <label for="to_visit">Still To Climb</label>
           </div>
         </div>
         <input type="submit" value="save"/>
