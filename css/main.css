@@ -4,29 +4,94 @@ body {
 
 #wrapper{
   display: grid;
-  /* grid-template-rows: 6fr .75fr 8fr .75fr; */
-  /* grid-template-columns: 2fr  5fr  2fr; */
   grid-template-columns: 1fr  6fr  1fr;
   grid-template-rows: auto auto auto;
 
+  box-shadow: 0 0 15px 15px rgba(200,200,200,.80);
   width: 100%;
   max-width: 1180px;
   margin: 0 auto;
-  background: #fff;
-  box-shadow: 0 0 15px 15px rgba(200,200,200,.14);
-  /* position: relative */
 }
+
+#mountkey{
+  grid-area: 1 / 1 / 2 / 4;
+  color: orange;
+  display: inline;
+
+}
+
+.mountkey{
+  display:inline;
+}
+
+#mountain-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+#form-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+#photo-banner{
+  background: url(../images/Glencoe.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
+  height: 400px;
+}
+
+
+#top-banner{
+  background-color: black;
+  color: white;
+  padding:10px;
+  height: 80px;
+}
+
+h2{border-bottom: 1px solid #000;}
+
+h3{border-bottom: 1px solid #000;}
+
 header{
   text-align: center;;
   grid-area: 1 / 1 / 2 / 4;
 }
 
 main{
-    grid-area: 3 / 2 / 4 / 3;
-    padding: 20px;
-    margin-bottom: 50px;
-    background-color: #2cacb1;
-    /* min-height: 700px; */
+  grid-area: 3 / 2 / 4 / 3;
+  padding: 20px;
+  margin-bottom: 50px;
+  /* background-color: #2cacb1; */
+  /* min-height: 700px; */
+}
+
+label.primary {
+  display: block;
+  margin: 0.4em 0;
+}
+
+label.radio-btn {
+  display: inline;
+  margin: 0.4em 0;
+}
+
+label::after {
+  content: ":";
+}
+
+
+.arrow:: before {
+  content: "▲";
+}
+
+button, input[type="submit"] {
+  margin-top: 1rem;
 }
 
 .hidden {
@@ -36,39 +101,40 @@ main{
 
 /* #add-mountain-form{display:none;} */
 
-#form-wrapper {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-}
-
 .form-item {
   margin-right: 1.8rem;
 }
 
-label.primary {
-  display: block;
-  margin: 0.4em 0;
-}
-
-label::after {
-  content: ":";
-}
-
-button, input[type="submit"] {
-  margin-top: 1rem;
-}
-
-#mountain-list {
-  display: flex;
-  flex-wrap: wrap;
-  list-style-type: none;
-}
 
 .mountain-list-item {
   margin: 0.5rem 0.5rem;
   padding: 0.5rem 0.8rem;
-  border: 1px solid #20437c;
-  border-radius: 5%;
-  background: #ddeaff;
+  border: 1px solid black;
+  /* border-radius: 5%; */
+  background: white;
+}
+
+.triangle {
+  font-size: 20px;
+}
+
+/* .arrow-up {
+width: 0;
+height: 0;
+border-left: 10px solid transparent;
+border-right: 10px solid transparent;
+
+border-bottom: 10px solid;
+} */
+
+.bagged {
+  font-size: 20px;
+  text-align: center;
+  color: green;
+}
+
+.not-bagged {
+  font-size: 20px;
+  text-align: center;
+  color: red;
 }

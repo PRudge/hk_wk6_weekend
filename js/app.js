@@ -1,11 +1,6 @@
 const initialLoad = function () {
-  const newMountainform = document.querySelector('#add-mountain-form');
-  // newItemform.textContent = "Welcome";
-  // newItemform.classList.add('hidden');
-  newMountainform.addEventListener('submit', handleNewMountainFormSubmit);
-
-  const deleteAllButton = document.querySelector('#delete-all');
-  deleteAllButton.addEventListener('click', handleDeleteAllClick);
+  addFormFunctionality();
+  addDeleteButtonFunctionality();
 }
 
 const handleNewMountainFormSubmit = function (event) {
@@ -17,6 +12,17 @@ const handleNewMountainFormSubmit = function (event) {
   event.target.reset();
 }
 
+const addFormFunctionality = function() {
+  const newMountainform = document.querySelector('#add-mountain-form');
+  // newItemform.textContent = "Welcome";
+  // newItemform.classList.add('hidden');
+  newMountainform.addEventListener('submit', handleNewMountainFormSubmit);
+}
+
+const addDeleteButtonFunctionality = function() {
+  const deleteAllButton = document.querySelector('#delete-all');
+  deleteAllButton.addEventListener('click', handleDeleteAllClick);
+}
 
 const createMountainListItem = function (form) {
   const mountainListItem = createMountainElement();
@@ -31,6 +37,7 @@ const createMountainListItem = function (form) {
 }
 
 const createMountainElement = function() {
+  const table = document.getElementById("myTable");
   const mountainListItem = document.createElement('li');
   mountainListItem.classList.add('mountain-list-item');
   return mountainListItem;
@@ -64,9 +71,11 @@ const addClimbedStatus = function(form, mountainListItem) {
 
 const getClimbStatus = function(climbStatus)  {
   if (climbStatus.textContent == 0)
-    {climbStatus.textContent = 'Climbed';
+    {climbStatus.textContent = '▲'
+    climbStatus.classList.add('bagged');
   }else {
-    climbStatus.textContent = 'To Climb';
+    climbStatus.textContent = '▲';
+    climbStatus.classList.add('not-bagged');
   }
   return climbStatus;
 }
