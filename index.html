@@ -16,14 +16,14 @@
     <main>
       <!-- <button id="add-mountains">Add some mountains</button> -->
       <form id="add-mountain-form">
-        <div id="form-wrapper">
+        <div class ="form-style-1">
           <div class="form-item">
             <label for="title" class="primary">Name</label>
-            <input type="mountain" id="mountain" required/>
+            <input type="text" id="mountain" required/>
           </div>
 
           <div class="form-item">
-            <label for="height" class="primary">Height</label>
+            <label for="height" class="primary">Height(m)</label>
             <input type="text" id="height" required/>
           </div>
 
@@ -43,15 +43,15 @@
             <label for="to_climb" class="radio-btn">Not Bagged</label>
             <input type="radio" id="to_climb" name="climb_status" value=1 checked>
           </div>
-        </div>
-        <input type="submit" value="save"/>
-      </form>
 
-      <button id="delete-all">Delete All Input</button>
+        </div>
+        <input type="submit" value="add mountain"/>
+      </form>
 
       <h2>List of Mountains</h2>
       <span class = "bagged">Bagged: ▲</span>
       <span class = "not-bagged">Not Bagged: ▲</span>
+      <input type="button" value="Delete all the mountains" id="delete-all"/>
       <div id="mountain-list"></div>
     </main>
   </div>
